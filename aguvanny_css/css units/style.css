@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+.px{
+    height: 60px;
+    width: 80vw;
+    background-color: bisque;
+}
+.percentage-parent{
+    height: 60px;
+    width: 70%; 
+    background-color: aquamarine;
+    position: relative;
+    /* top: 23%;
+    right: 43%; */
+    
+}
+.percentage{
+    margin-inline: auto;
+    /* vw means view port....its percentage of the view port */
+    /* position: absolute;
+    top: 15%;
+    left: 20%; */
+    height: 10vw;
+    width: 100vw; 
+    background-color:blue;
+    
+}
+.rem{
+    /* 1 rem = 16 px,it means root element,its the font size of the root element */
+   font-size: 1rem; 
+}
