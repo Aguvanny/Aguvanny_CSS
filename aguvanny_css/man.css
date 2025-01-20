@@ -2,6 +2,8 @@
     color: blue;
     font-size: xx-large;
     font-weight: bolder;
+    background-color: palevioletred;
+    width: 250px;
 }
 .form-box label {
     color: brown;
@@ -9,5 +11,33 @@
     font-weight: bolder;
 }
 .form-box input {
-width: 50%;
+width: 10%;
+border-radius: 8px;
+border: 4px solid;
+height: 50px;
+}
+div {
+    margin-bottom: 1%;
+}
+.form-box ::placeholder {
+    color: darkgreen;
+    font-size: x-small;
+}
+.form-box button {
+    display: block;
+    color: coral;
+}
+.form-box footer {
+    text-align: center;
+    font-stretch: semi-expanded;
+    color: blueviolet;
+    text-decoration: solid;
+}
+.form-box textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: black;
+    border: 4px solid;
+    
+    
 }
