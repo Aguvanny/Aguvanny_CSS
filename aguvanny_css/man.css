@@ -1,0 +1,13 @@
+.form-head {
+    color: blue;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.form-box label {
+    color: brown;
+    font-size: 100%;
+    font-weight: bolder;
+}
+.form-box input {
+width: 50%;
+}
