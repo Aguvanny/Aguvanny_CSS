@@ -1,0 +1,48 @@
+h1, div, strong {
+    width: 90%;
+}
+
+h1 {
+    margin-left: 45px;
+    text-align: center;
+}
+
+.parent-box {
+    height: 500px;
+    border: solid 10px yellow;
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rect {
+    height: 70px;
+    width: 90px;
+    background-color: royalblue;
+    text-align: center;
+    padding: 1em;
+}
+.rect:nth-child(1) {
+    align-self: flex-end;
+    order: 5;
+}
+.rect:nth-child(2) {
+    align-self: flex-start;
+    order: 1;
+}
+.rect:nth-child(3) {
+    order: 3;
+}
+.rect:nth-child(4) {
+    align-self: flex-start;
+    order: 4;
+}
+.rect:nth-child(5) {
+    align-self: flex-end;
+    order: 0;
+}
+.rect:nth-child(6) {
+    align-self: flex-end;
+    order: 2;
+}

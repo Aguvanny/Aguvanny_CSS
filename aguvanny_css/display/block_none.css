@@ -1,0 +1,11 @@
+.parent {
+    /* display: block; */
+}
+
+.children {
+    background-color: saddlebrown;
+    width: 50%;
+    height: 15%;
+    margin-bottom: 10px;
+    display: block;
+}
