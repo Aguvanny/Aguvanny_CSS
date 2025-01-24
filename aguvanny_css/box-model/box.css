@@ -1,0 +1,53 @@
+*{
+    margin: 7px;
+    box-sizing: border-box;
+}
+
+div {
+    width: 20%;
+}
+.box-2 {
+    height: 225px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    padding: 8%;
+}
+.box-1 {
+    height: 100px;
+    background-color: hotpink;
+}
+.box-3 {
+    height: 100px;
+    background-color: rgb(48, 104, 224);
+    color: darkmagenta;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 0 16px;
+}
+.box-4 {
+    background-color: yellowgreen;
+    width: 400px;
+    height: 100px;
+    text-align: right;
+    color: darkturquoise;
+    padding-right: 30px;
+}
+.cy-0 {
+    height: 100px;
+    border-radius: 50%;
+    width: 60px;
+    background-color: indianred;
+    z-index: 10;
+    position: relative;
+}
+.cy-1 {
+    left: 40px;
+}
+.cy-2 {
+    right: 40px;
+}
+.cy {
+    display: flex;
+    width: auto;
+}
