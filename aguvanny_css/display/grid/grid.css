@@ -1,0 +1,15 @@
+.parent {
+    width: 100%;
+    height: 100vh;
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr) repeat(5, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    /* width: 100px; */
+    height: 100px;
+    background-color: burlywood;
+}
