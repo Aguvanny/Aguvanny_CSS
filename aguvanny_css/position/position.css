@@ -1,6 +1,7 @@
 .container {
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    width: auto;
+    /* position: relative; */
 }
 .box {
     background-color: #042f31;
@@ -8,7 +9,29 @@
     margin-bottom: 10px;
     height: 150px;
     width: 150px;
+    
 }
 .static {
     position: static;
+}
+.relative {
+    position: relative;
+    left: 200px;
+
+}
+.fixed {
+    position: fixed;
+    right: 50%;
+    top: 0;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+.absolute {
+    position: absolute;
+    top: 50%;
+}
+.absolute-container {
+    position: relative;
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SPECIFICITY</title>
+    <style>
+        p {
+            color: rgb(134, 54, 134)
+        }
+        .pclass {
+            color: black !important;
+        }
+        #pid {
+            color: rgb(244, 244, 134);
+            /* position: fixed; */
+            /* z-index: -1; */
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            position: absolute;
+            /* opacity: 0.2; */
+        }
+        /* .stacks {
+            position: absolute;
+        } */
+        .stk-1 {
+            z-index: 4;
+        }
+        .stk-2 {
+            z-index: 3;
+            left: 10px;
+        }
+        .stk-3 {
+            z-index: 2;
+            left: 20px;
+        }
+        .stk-4 {
+            z-index: 1;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>VANNESSA'S HEAD</h1>
+    <img class="stacks" src="./vannessas-way.jpg" alt="">
+    <P id="pid" class="pclass" style="color: blue;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque rem quod non facere doloribus itaque rerum deserunt nihil eaque accusamus.</P>
+    <!-- <img class="stacks stk-2" src="./van1.jpeg" alt="">
+    <img class="stacks stk-3" src="./van2.jpeg" alt="">
+    <img class="stacks  stk-4" src="./van3.jpeg" alt=""> -->
+</body>
+</html>
