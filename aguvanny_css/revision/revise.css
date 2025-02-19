@@ -1,0 +1,12 @@
+.t-head {
+    border: 5px solid orange;
+}
+.t-body {
+    border: 2px solid green;
+}
+.t-foot {
+    border: 5px solid red;
+}
+table {
+    border: 5px solid orange;
+}

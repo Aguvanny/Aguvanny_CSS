@@ -169,52 +169,10 @@ font-weight: bold;
     background-color: rgb(1, 1, 41);
     color: white;
 }
-.box1{
+.boxer{
     border: 1px solid;
     padding: 8px;
     border-radius: 6px;
-}
-.box2{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
-}
-.box3{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
-}
-.box4{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
-}
-.box5{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
-}
-.box6{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
-}
-.box7{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
-}
-.box8{
-    border: 1px solid;
-    padding: 8px;
-    border-radius: 6px;
-    
 }
 .greedy{
     display: grid;
@@ -258,8 +216,8 @@ font-weight: bold;
     background-color: black;
     color: white;
     
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     padding: 150px;
 
 }
@@ -313,7 +271,6 @@ border: 0px solid;
 background-color: rgb(27, 28, 39);
 border-radius: 15px;
 padding: 30px;
-margin-bottom: ;
 
 }
 
@@ -345,10 +302,11 @@ margin-bottom: ;
 .blue{
     background-color: aliceblue;
     color: black;
-    height: 500px;
-    padding: 120px;
-    width: 1035px;
-    margin-right: 1000px;
+    /* height: 500px; */
+    /* padding: 120px; */
+    width: 100%;
+    /* margin-right: 1000px; */
+    overflow: hidden;
 
 }
 .blue-text{
@@ -442,7 +400,3 @@ footer{
     border-radius: 30px;
     
 }
-
-
-
-

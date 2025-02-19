@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MEDIA QUERY</title>
+    <style>
+        .media {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+        }
+        .box {
+            background-color: aquamarine;
+            height: 3rem;
+        }
+        @media (max-width: 575px) {
+            .media {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 991px) and (min-width: 576px){
+            .media {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="media">
+        <div class="box">BoxA</div>
+        <div class="box">BoxB</div>
+        <div class="box">BoxC</div>
+        <div class="box">BoxD</div>
+        <div class="box">BoxE</div>
+        <div class="box">BoxF</div>
+        <div class="box">BoxG</div>
+        <div class="box">BoxH</div>
+        <div class="box">BoxI</div>
+        <div class="box">BoxJ</div>
+    </div>
+    
+</body>
+</html>
