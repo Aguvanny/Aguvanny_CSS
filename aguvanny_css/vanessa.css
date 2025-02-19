@@ -1,24 +1,17 @@
-body {
-    background-color: bisque;
+.decide{
+    color: rgb(38, 17, 1);
+    border: dashed;
 }
-p {
-    color: purple;
+.decide.now{
+    color: rgb(8, 100, 69);
+    border: none;
+}
+#choice{
+    color: aquamarine;
+    background-color: palevioletred;
+    border: dashed chocolate;
+    padding: 50vh;
+}
+a [href]{
     background-color: blue;
-    width: fit-content;
-} 
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
-}
-div {
-    display: flex;
-    color: rosybrown;
-}
-.setFont {
-    font-family: fantasy;
-}
-#van {
-    border-radius: 10px;
-    width: 20vw;
-    height: 5vh;
 }

@@ -1,0 +1,15 @@
+.grid-papi{
+width: 100vw;
+height: 100vh;
+display: grid;
+background-color: chartreuse;
+grid-template-columns: repeat(1, 1fr) repeat(4, 0.5fr);
+gap: 10px;
+align-items: center;
+justify-content: center;
+}
+.gp{
+    background-color: crimson;
+    height: 100px;
+    /* width: 100px; */
+}
