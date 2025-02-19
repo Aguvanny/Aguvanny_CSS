@@ -301,18 +301,22 @@ font-weight: bold;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
+    padding: 80px;
+    margin: 0%;
+
   
 }
 .gri-bod{
 border: 0px solid;
-display: inline-block;
+/* display: inline-block; */
 background-color: rgb(27, 28, 39);
 border-radius: 15px;
 padding: 30px;
-margin-top: 20px;
-margin: px;
+margin-bottom: ;
+
 }
+
 .gr-text h2{
     font-size: xx-large;
     font-weight: bolder;
@@ -342,9 +346,9 @@ margin: px;
     background-color: aliceblue;
     color: black;
     height: 500px;
-    padding: 70px;
-    width: 700px;
-    margin-left: 140px;
+    padding: 120px;
+    width: 1035px;
+    margin-right: 1000px;
 
 }
 .blue-text{
@@ -364,7 +368,7 @@ margin: px;
     width: 200px;
 } */
 .face{
-    background-color: aliceblue;
+    background-color: rgb(239, 241, 243);
     color: black;
     text-align: center;
     border-radius: 20px;
@@ -374,6 +378,8 @@ margin: px;
     align-items: center;
     justify-content: center;
     padding: 50px;
+    margin: 0%;
+    margin-top: 0%;
 
     
 
