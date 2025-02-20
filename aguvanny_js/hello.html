@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body>
+    <p id="demo">Hello World</p>
+    <div class="collect-name">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <button onclick="greet()">Greet me</button>
+    </div>
+    <script>
+        function greet(){
+            const paragraph = document.getElementById("demo");
+            const input = document.getElementById("name");
+            console.log("Paragraph content: ", paragraph.innerHTML);
+            console.log("Input value: ", input.value);
+            paragraph.innerHTML = "Hello " + input.value;
+        }
+    </script>
+</body>
+</html>
