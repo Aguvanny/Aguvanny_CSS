@@ -10,3 +10,4 @@ function minus(num1, num2) {
 }
 
 minus(10, 50);
+console.log("Vannessa is here");

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADRE BOXES</title>
+    <style>
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-content: space-evenly;
+            row-gap: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            color: black;
+            text-align: center;
+            padding: 1em;
+        }
+        .addre {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px;
+            width: 100px;
+            height: 35px;
+        }
+        #add {
+            background-color: green;
+        }
+        #remove {
+            background-color: red;
+        }
+        button:hover {
+            cursor: pointer;
+            opacity: 0.5;
+            color: white;
+        }
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .add, .remove {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        input {
+            /* padding: 10px; */
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="addre">
+        <h1>ADD OR REMOVE BOXES</h1>
+        <div class="btns">
+            <div class="add">
+                <button id="add" onclick="addBox()">Add</button>
+                <div class="add-input">
+                    <input type="text" name="add-name" placeholder="enter name" id="add-name">
+                </div>
+            </div>
+            <div class="remove">
+                <button id="remove" onclick="removeBox()">Remove</button>
+                <div class="remove-input">
+                    <input type="text" name="remove-name" placeholder="enter name" id="remove-name">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boxes" id="boxers">
+        <div class="box" id="peter">Peter</div>
+        <div class="box" id="silas">Silas</div>
+        <div class="box" id="paul">Paul</div>
+        <div class="box" id="joseph">Joseph</div>
+        <div class="box" id="jeff">Jeff</div>
+    </div>
+    <script>
+        const boxers = document.getElementById("boxers");
+
+        function addBox() {
+            const box = document.createElement("div");
+            box.classList.add("box");
+            const input = document.getElementById("add-name");
+            box.id = input.value.toLowerCase();
+            box.innerHTML = input.value;
+            boxers.appendChild(box);
+        }
+
+        function removeBox() {
+            const input = document.getElementById("remove-name");
+            const box = document.getElementById(input.value.toLowerCase());
+            boxers.removeChild(box);
+        }
+
+    </script>
+</body>
+</html>
