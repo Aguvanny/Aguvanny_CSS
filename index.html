@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Form</title>
+</head>
+<body>
+    <h2>Send Chat Message</h2>
+    <form id="chatForm">
+        <label>Text (Optional):</label>
+        <input type="text" name="text" id="text" maxlength="15000"><br><br>
+
+        <label>Type:</label>
+        <select name="type" id="type" required>
+            <option value="private">Private</option>
+            <option value="group">Group</option>
+        </select><br><br>
+
+        <label>Upload Image:</label>
+        <input type="file" name="image" id="image"><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <script>
+        document.getElementById('chatForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            let formData = new FormData();
+            formData.append('type', document.getElementById('type').value);
+            formData.append('receiver_id','c6af9d7d-df17-4d13-9783-0f7d07f66eea');
+
+            let fileInput = document.getElementById('image');
+            if (fileInput.files.length > 0) {
+                formData.append('video', fileInput.files[0]);
+            }
+
+            try {
+                let response = await fetch('http://localhost:8000/v1/chat/create', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTc0MDM2MTc0OSwiZXhwIjoxNzQwMzY1MzQ5LCJuYmYiOjE3NDAzNjE3NDksImp0aSI6Ik10TU5jbjdib2FlWkxaajEiLCJzdWIiOiI4IiwicHJ2IjoiMjFkMTJiMDZlYjUwOTJkOTI0NzM2NDZkYjUwYzQxZGVlMTFiNTU1OSJ9.dpRik613Ei-Ir0lgYrWNnzdwJqWKQW1povFzFLPMqUU'
+                    }
+                });
+
+                let result = await response.json();
+                console.log(result);
+                alert(JSON.stringify(result, null, 2));
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to send message');
+            }
+        });
+    </script>
+</body>
+</html>
