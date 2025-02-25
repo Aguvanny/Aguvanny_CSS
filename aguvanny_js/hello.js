@@ -1,13 +1,24 @@
-let fname = "vannesa";
-fname = "Vee";
-let lname;
-const gender = "female";
+// variables
+let vannessa = "vannessa is 5 hot";
+vannessa = 5;
+const yusuf = 10.11;
+vannessa = [1, 1 ,1];
+let hello = "hello world";
 
-function minus(num1, num2) {
-    const result = num1 - num2;
-    console.log(result);
-    // return result;
+// data types
+// String
+let vany = "vannessa";
+function fuckAll(name) {
+    return "Hello " + name + " your name is " + name.length + " characters long";
+}
+function fuckAllExtrapolation(name) {
+    return `Hello ${name} your name is ${name.length} characters long`;
 }
 
-minus(10, 50);
-console.log("Vannessa is here");
+const result = fuckAllExtrapolation("Yusuf");
+console.log(result);
+// Array
+let arr = [2, 4, 3, 5, 1, "some text", "other text"];
+arr.pop();
+arr.pop();
+console.log(arr);
