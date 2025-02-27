@@ -21,4 +21,4 @@ console.log(result);
 let arr = [2, 4, 3, 5, 1, "some text", "other text"];
 arr.pop();
 arr.pop();
-console.log(arr);
+console.log(arr[1]);
