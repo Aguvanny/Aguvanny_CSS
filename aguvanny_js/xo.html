@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO</title>
+    <link rel="stylesheet" href="xo.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="players">
+            <div class="player">
+                <div class="play" id="ppp-one">
+                    <label for="player-one">Enter id: </label>
+                    <input type="text" placeholder="Enter id..." name="player-one" id="one"> <br><br>
+                    <button class="submit" id="submit-one">Submit</button>
+                </div>
+                <p>Player 1 is <span id="p-one-id">X</span></p>
+                <button class="pp" id="pp-one">Player 1</button>
+            </div>
+            <div class="player">
+                <div class="play" id="ppp-two">
+                    <label for="player-two">Enter id: </label>
+                    <input type="text" placeholder="Enter id..." name="player-two" id="two"><br><br>
+                    <button class="submit" id="submit-two">Submit</button>
+                </div>
+                <p>Player 2 is <span id="p-two-id">O</span></p>
+                <button class="pp" id="pp-two">Player 2</button>
+            </div>
+        </div>
+        <div class="xo">
+            <div class="box" id="one-one"></div>
+            <div class="box one-two" id="one-two"></div>
+            <div class="box one-three" id="one-three"></div>
+            <div class="box two-one" id="two-one"></div>
+            <div class="box two-two" id="two-two"></div>
+            <div class="box two-three" id="two-three"></div>
+            <div class="box three-one" id="three-one"></div>
+            <div class="box three-two" id="three-two"></div>
+            <div class="box three-three" id="three-three"></div>
+        </div>
+    </div>
+    <script>
+        let player_one = "X";
+        let player_two = "O";
+        let current_player = "";
+        let current_play_count = 0;
+
+
+        const winner = () => {
+            const box_11 = document.getElementById("one-one");
+            const box_12 = document.getElementById("one-two")
+            const box_13 = document.getElementById("one-three")
+            const box_21 = document.getElementById("two-one")
+            const box_22 = document.getElementById("two-two")
+            const box_23 = document.getElementById("two-three")
+            const box_31 = document.getElementById("three-one")
+            const box_32 = document.getElementById("three-two")
+            const box_33 = document.getElementById("three-three")
+            if(box_11.innerHTML === box_22.innerHTML === box_33.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_11.innerHTML === box_12.innerHTML === box_13.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_21.innerHTML === box_22.innerHTML === box_23.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_31.innerHTML === box_32.innerHTML === box_33.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_13.innerHTML === box_22.innerHTML === box_31.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_11.innerHTML === box_21.innerHTML === box_31.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_12.innerHTML === box_22.innerHTML === box_32.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            }
+            else if(box_13.innerHTML === box_23.innerHTML === box_33.innerHTML) {
+                alert(`Hurray!!! ${current_player.toUpperCase()} Won🥳`);
+            } else {
+                [
+                    box_11, box_12, box_13, box_21, box_22, box_23, box_31,
+                    box_32, box_33
+                ].map((box) => {
+                    if(box.innerHTML !== player_one || box.innerHTML !== player_two) {
+                        return;
+                    }
+                    alert("Hey Bores, The game ends in a draw");
+                });
+            }
+        };
+
+
+        
+        const submit_one = document.getElementById("submit-one");
+        const submit_two = document.getElementById("submit-two");
+
+        submit_one.addEventListener("click", function() {
+            player_one = document.getElementById("one").value;
+            document.getElementById("p-one-id").innerHTML = player_one;
+            document.getElementById("pp-one").innerHTML = player_one;
+            document.getElementById("ppp-one").style.display = "none";
+        });
+        submit_two.addEventListener("click", function() {
+            player_two = document.getElementById("two").value;
+            document.getElementById("p-two-id").innerHTML = player_two;
+            document.getElementById("pp-two").innerHTML = player_two;
+            document.getElementById("ppp-two").style.display = "none";
+        });
+
+        document.getElementById("pp-one").addEventListener("click", function() {
+            current_player = player_one;
+            current_play_count = 0
+        });
+        document.getElementById("pp-two").addEventListener("click", function() {
+            current_player = player_two;
+            current_play_count = 0
+        });
+
+        const boxes = [...document.getElementsByClassName("box")];
+        boxes.map((box) => {
+            box.addEventListener("click", function() {
+                if(current_play_count === 0) {
+                    box.innerHTML = current_player;
+                    current_play_count = 1;
+                    winner();
+                } else {
+                    alert(`${current_player.toUpperCase()} Its not turn Bitch!`);
+                }
+            });
+        });
+
+
+
+    </script>
+</body>
+</html>

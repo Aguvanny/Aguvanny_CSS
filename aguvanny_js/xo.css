@@ -1,0 +1,34 @@
+.container {
+    width: 50%;
+    padding: 20px;
+}
+.players {
+    display: flex;
+}
+.player {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.play {
+    padding: 20px;
+}
+button {
+    color: black;
+    border-radius: 16px;
+}
+.submit {
+    background-color: blue;
+}
+.pp {
+    background-color: pink;
+}
+.xo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.box {
+    height: 100px;
+    border: 1px solid;
+    color: white;
+    text-align: center;
+}
